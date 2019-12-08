@@ -4,6 +4,8 @@ import {ILogger} from './interfaces/logger-interface';
 import {IPerson} from './interfaces/person-interface';
 import Organisation from './organisation';
 import {IPostDepartment} from './interfaces/post-department-interface';
+import PostDepartment from './post-department';
+import {IPackage} from './interfaces/package-interface';
 
 export class PostCompany extends Organisation implements  IPostCompany, ILogger {
   constructor(
@@ -16,6 +18,18 @@ export class PostCompany extends Organisation implements  IPostCompany, ILogger 
      public departments: IPostDepartment[] = []
   ) {
     super(id, type, name, address, telephone, owner);
+  }
+  createDepartment(department: IOrganisation): PostCompany {
+    this.departments.push(
+      new PostDepartment(
+        department.id,
+        department.type,
+        department.name,
+        department.address,
+        department.telephone,
+        this,
+        []));
+    return this;
   }
   logData() {
     console.log(

@@ -29,11 +29,21 @@
         <span>Packages</span>
       </aside>
       <div class="content">
-        sdad
+        <ul>
+          <li
+            *ngFor="let post of postItems"
+            style="list-style: none; margin: 20px 0"
+          >
+            <app-post-item
+              *ngIf="showPostList"
+              [postItem]="post"
+            ></app-post-item>
+          </li>
+        </ul>
       </div>
     </main>
     <footer>
-      AAA
+      footer
     </footer>
   </body>
 </html>

@@ -12,11 +12,10 @@ export default class PostDepartment extends  Organisation implements  IPostDepar
     name: string,
     address: string,
     telephone: string,
-    owner: IOrganisation,
     public parent: PostCompany,
     public packages: IPackage[] = []
   ) {
-    super(id, type, name, address, telephone, owner);
+    super(id, type, name, address, telephone);
   }
   logData() {
     console.log(
