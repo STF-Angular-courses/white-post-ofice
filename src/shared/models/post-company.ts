@@ -15,9 +15,11 @@ export class PostCompany extends Organisation implements  IPostCompany, ILogger 
      address: string,
      telephone: string,
      owner: string | IOrganisation | IPerson,
+     screen: string,
+     description: string,
      public departments: IPostDepartment[] = []
   ) {
-    super(id, type, name, address, telephone, owner);
+    super(id, type, name, address, telephone,  screen, description, owner);
   }
   createDepartment(department: IOrganisation): PostCompany {
     this.departments.push(
@@ -27,6 +29,8 @@ export class PostCompany extends Organisation implements  IPostCompany, ILogger 
         department.name,
         department.address,
         department.telephone,
+        department.screen,
+        department.description,
         this,
         []));
     return this;

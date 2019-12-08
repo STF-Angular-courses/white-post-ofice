@@ -12,4 +12,6 @@ export interface IPackage {
   weight: string;
   price: string;
   type: string;
+  screen: string;
+  description: string;
 }

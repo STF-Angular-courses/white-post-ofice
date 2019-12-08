@@ -12,6 +12,8 @@ export default class Person implements IPerson, IClient, ILogger {
     public address: string,
     public telephone: string,
     public discount: number | boolean,
+    public screen: string,
+    public description: string,
     public items: IPackage[] = [],
     public sended: IPackage[] = [],
     public received: IPackage[] = []
@@ -25,6 +27,7 @@ export default class Person implements IPerson, IClient, ILogger {
       'Discount: ' + this.discount + '\n' +
       'Address: ' + this.address + '\n' +
       'Tel: ' + this.telephone + '\n' +
+      'Description: ' + this.description + '\n' +
       'Packages Count: ' + this.items.length + '\n' +
       (this.sended.length > 0 ? ('Sended: ' + this.sended.length +  '\n') : '') +
       (this.received.length > 0 ? ('Received: ' + this.received.length +  '\n') : '')

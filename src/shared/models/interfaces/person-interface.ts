@@ -8,5 +8,7 @@ export interface IPerson {
   address: string;
   telephone: string;
   discount: number | boolean;
+  screen: string;
+  description: string;
 }
 

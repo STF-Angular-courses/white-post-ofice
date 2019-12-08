@@ -12,7 +12,9 @@ export default class Package implements IPackage, ILogger {
               public price: string,
               public height: string,
               public width: string,
-              public weight: string) { }
+              public weight: string,
+              public screen: string,
+              public description: string) { }
   logData() {
     console.log(`------ Package ------
         Client: ${this.client}

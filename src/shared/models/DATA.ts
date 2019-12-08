@@ -8,18 +8,24 @@ export const postItemsData = [
     'Stolychne shose str, 103, Kyiv, Ukraine',
     '111-111-11',
     'Mr X.',
+    '',
+    ''
   ).createDepartment({
     id: 'CD0001-00',
     type: 'Departmant',
     name: 'Post Department in Khmelnytskyi',
     address: 'Svoboda str, 23, Khmelnytskyi, Ukraine',
-    telephone: '111-111-11-11'
+    telephone: '111-111-11-11',
+    screen: '',
+    description: ''
   }).createDepartment({
     id: 'CD0001-01',
     type: 'Departmant',
     name: 'Post Department in Lviv',
     address: 'Shevchenka str, 6, Lviv, Ukraine',
-    telephone: '111-111-11-22'
+    telephone: '111-111-11-22',
+    screen: '',
+    description: ''
   }),
   new PostCompany(
     'C0002',
@@ -28,18 +34,24 @@ export const postItemsData = [
     'Franka str, 32, Kyiv, Ukraine',
     '222-222-22',
     'Mr Y.',
+    '',
+    ''
   ).createDepartment({
     id: 'CD0002-00',
     type: 'Departmant',
     name: 'Ukr Post Department in Khmelnytskyi',
     address: 'Zarichna str, 11/2, Khmelnytskyi, Ukraine',
-    telephone: '222-222-22-11'
+    telephone: '222-222-22-11',
+    screen: '',
+    description: ''
   }).createDepartment({
     id: 'CD0002-01',
     type: 'Departmant',
     name: 'Ukr Post Department in Poltava',
     address: 'Peremogy str, 16, Poltava, Ukraine',
-    telephone: '222-222-22-22'
+    telephone: '222-222-22-22',
+    screen: '',
+    description: ''
   })
 ];
 

@@ -8,4 +8,6 @@ export  interface IOrganisation {
   address: string;
   telephone: string;
   owner?: string | IOrganisation | IPerson;
+  screen?: string;
+  description?: string;
 }

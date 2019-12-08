@@ -9,6 +9,8 @@ export default abstract class Organisation implements IOrganisation, ILogger {
     public name: string,
     public address: string,
     public telephone: string,
+    public screen?: string,
+    public description?: string,
     public owner?: string | IOrganisation | IPerson
   ) { }
   logData() {
