@@ -6,13 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostItemComponent } from './post-item/post-item.component';
 import { PostDepartmentComponent } from './post-department/post-department.component';
 import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
+import { ClientItemComponent } from './client-item/client-item.component';
+import { PackageItemComponent } from './package-item/package-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostItemComponent,
-    PostDepartmentComponent
+    PostDepartmentComponent,
+    ClientItemComponent,
+    PackageItemComponent
   ],
   imports: [
     BrowserModule,

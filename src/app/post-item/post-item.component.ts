@@ -13,5 +13,7 @@ export class PostItemComponent implements OnInit {
 
   ngOnInit() {
   }
+  viewMore(postItem: PostCompany): void {
 
+  }
 }

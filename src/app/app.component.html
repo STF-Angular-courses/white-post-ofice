@@ -24,20 +24,22 @@
     </header>
     <main>
       <aside>
-        <span>Post</span>
-        <span>Clients</span>
-        <span>Packages</span>
+        <span (click)="showList($event)" id="post-btn">Post</span>
+        <span (click)="showList($event)" id="client-btn">Clients</span>
+        <span (click)="showList($event)" id="pack-btn">Packages</span>
       </aside>
       <div class="content">
-        <ul>
+        <ul *ngIf="showPostList" class="post-list">
           <li
             *ngFor="let post of postItems"
             style="list-style: none; margin: 20px 0"
           >
-            <app-post-item
-              *ngIf="showPostList"
-              [postItem]="post"
-            ></app-post-item>
+            <app-post-item [postItem]="post"></app-post-item>
+          </li>
+        </ul>
+        <ul *ngIf="showClientList" class="client-list">
+          <li *ngFor="let client of clientItems" style="list-style: none;">
+            <app-client-item [clientItem]="client"></app-client-item>
           </li>
         </ul>
       </div>
