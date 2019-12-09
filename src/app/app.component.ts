@@ -26,14 +26,20 @@ export class AppComponent {
         case 'post-btn': this.showPostList = true;
           this.showClientList = false;
           this.showPackList = false;
+          this.viewItem = undefined;
+
           break;
         case 'client-btn': this.showClientList = true;
           this.showPackList = false;
           this.showPostList = false;
+          this.viewItem = undefined;
+
           break;
         case 'pack-btn': this.showPackList = true;
           this.showClientList = false;
           this.showPostList = false;
+          this.viewItem = undefined;
+
           break;
         default: break;
       }
