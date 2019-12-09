@@ -8,6 +8,7 @@ export default class Package implements IPackage, ILogger {
   constructor(public client: IOrganisation | IPerson,
               public startingPoint: IPostDepartment,
               public destinationPoint: IPostDepartment,
+              public name: string,
               public type: string,
               public price: string,
               public height: string,

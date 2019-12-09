@@ -7,6 +7,7 @@ export interface IPackage {
   client: IOrganisation | IPerson;
   startingPoint: IPostDepartment;
   destinationPoint: IPostDepartment;
+  name: string;
   height: string;
   width: string;
   weight: string;

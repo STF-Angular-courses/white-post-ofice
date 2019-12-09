@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import Person from '../../shared/models/person';
 import {PostCompany} from '../../shared/models/post-company';
 
@@ -9,11 +9,13 @@ import {PostCompany} from '../../shared/models/post-company';
 })
 export class ClientItemComponent implements OnInit {
   @Input() clientItem: Person;
+  @Output() clientDetail = new EventEmitter<Person>();
+
   constructor() { }
 
   ngOnInit() {
   }
-  viewMore(postItem: Person): void {
-
+  viewMore(): void {
+    this.clientDetail.emit(this.clientItem);
   }
 }

@@ -8,6 +8,7 @@ import { PostDepartmentComponent } from './post-department/post-department.compo
 import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
 import { ClientItemComponent } from './client-item/client-item.component';
 import { PackageItemComponent } from './package-item/package-item.component';
+import { ItemInfoComponent } from './item-info/item-info.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PackageItemComponent } from './package-item/package-item.component';
     PostItemComponent,
     PostDepartmentComponent,
     ClientItemComponent,
-    PackageItemComponent
+    PackageItemComponent,
+    ItemInfoComponent
   ],
   imports: [
     BrowserModule,

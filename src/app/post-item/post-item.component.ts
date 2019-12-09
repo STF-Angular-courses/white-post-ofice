@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostCompany} from '../../shared/models/post-company';
 
 @Component({
@@ -8,12 +8,12 @@ import {PostCompany} from '../../shared/models/post-company';
 })
 export class PostItemComponent implements OnInit {
   @Input() postItem: PostCompany;
-
+  @Output() postDetail = new EventEmitter<PostCompany>();
   constructor() { }
 
   ngOnInit() {
   }
-  viewMore(postItem: PostCompany): void {
-
+  viewMore(): void {
+    this.postDetail.emit(this.postItem);
   }
 }

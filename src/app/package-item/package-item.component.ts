@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {PostCompany} from '../../shared/models/post-company';
+import Package from '../../shared/models/package';
 
 @Component({
   selector: 'app-package-item',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./package-item.component.scss']
 })
 export class PackageItemComponent implements OnInit {
+  @Input() package;
+  @Output() packageDetail = new EventEmitter<Package>();
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  viewMore(): void {
+    this.packageDetail.emit(this.package);
+  }
 }
