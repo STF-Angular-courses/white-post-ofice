@@ -1,24 +1,37 @@
-import { Component } from '@angular/core';
-import {clientItemsData, postItemsData} from '../shared/models/DATA';
-import {PostCompany} from '../shared/models/post-company';
-import Person from '../shared/models/person';
-import Package from '../shared/models/package';
-import PostDepartment from '../shared/models/post-department';
+import {Component, OnInit} from '@angular/core';
+import {PostService} from '../common/services/post.service';
+import {PostDepartmentService} from '../common/services/post-department.service';
+import {ClientService} from '../common/services/client.service';
+import {PostCompany} from '../common/contracts/post-company';
+import Person from '../common/contracts/person';
+import PostDepartment from '../common/contracts/post-department';
+import Package from '../common/contracts/package';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showPostList = true;
   showClientList = false;
   showPackList = false;
   selectedItem = false;
   viewItem: any;
-  postItems = postItemsData;
-  clientItems = clientItemsData;
+  postCompanyList: PostCompany[];
+  postDepartmentList: PostDepartment[];
+  clientsList: Person[];
 
+  constructor(
+    private postService: PostService,
+    private postDepartmentService: PostDepartmentService,
+    private clientService: ClientService
+  ) { }
+  ngOnInit(): void {
+    this.postCompanyList = this.postService.postCompanyList;
+    this.postDepartmentList = this.postDepartmentService.postDepartmentList;
+    this.clientsList = this.clientService.clientList;
+  }
   showList(event: Event) {
     if (event.target instanceof HTMLElement) {
       const target = event.target as HTMLElement;
