@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import Person from '../../shared/contracts/person';
-import {PostCompany} from '../../shared/contracts/post-company';
+import {IClient} from '../../../common/models/client.model';
+
 
 @Component({
   selector: 'app-client-item',
@@ -8,14 +8,14 @@ import {PostCompany} from '../../shared/contracts/post-company';
   styleUrls: ['./client-item.component.scss']
 })
 export class ClientItemComponent implements OnInit {
-  @Input() clientItem: Person;
-  @Output() clientDetail = new EventEmitter<Person>();
+  @Input() client: IClient;
+  @Output() clientDetail = new EventEmitter<IClient>();
 
   constructor() { }
 
   ngOnInit() {
   }
-  viewMore(): void {
-    this.clientDetail.emit(this.clientItem);
+  viewDetail(): void {
+    this.clientDetail.emit(this.client);
   }
 }

@@ -8,6 +8,7 @@ export default class Person implements IPerson, IClient, ILogger {
     public name: string,
     public id: string,
     public age: number,
+    public passport: string,
     public category: string,
     public address: string,
     public telephone: string,

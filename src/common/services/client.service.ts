@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import Person from '../contracts/person';
+import {IClient} from '../models/client.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
-  clientList = [
+  clientList: IClient[] = [
     new Person(
       'Ivan Ivanov',
-      'HB0001',
+      '1',
       33,
+      'HB0000',
       'individual',
       'Zavodska str, 4/1, Khmelnytskyi, Ukraine',
       '093-102-120-11-11',
@@ -21,6 +23,7 @@ export class ClientService {
       'Petrov Sidiriv',
       'HB0002',
       43,
+      'HB0001',
       'individual',
       'Trudova str, 14, Khmelnytskyi, Ukraine',
       '055-155-177-16-551',
@@ -31,6 +34,7 @@ export class ClientService {
       'Sergiy Ivanovych',
       'HB0003',
       23,
+      'HB0002',
       'individual',
       'Tovstogo str, 38/2, Khmelnytskyi, Ukraine',
       '045-178-157-11-50',
@@ -40,10 +44,10 @@ export class ClientService {
     )
   ];
   constructor() { }
-  add(client: Person): void {
+  add(client: IClient): void {
     this.clientList.push(client);
   }
-  remove(client: Person): void {
+  remove(client: IClient): void {
     try {
       const index = this.clientList.indexOf(client);
       this.clientList.splice(index, 1);

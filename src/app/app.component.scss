@@ -1,4 +1,4 @@
-@import '../shared/mixins_vars';
+@import '../common/mixins_vars';
 
 * {
   box-sizing: border-box;
@@ -87,16 +87,16 @@ main {
   width: 100%;
   padding: 40px 40px;
   //background: #f3f1f1;
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0;
-    li {
-      margin: 0 0 20px 0;
-    }
-  }
+  //ul {
+  //  display: flex;
+  //  flex-direction: row;
+  //  justify-content: space-between;
+  //  flex-wrap: wrap;
+  //  margin: 0;
+  //  li {
+  //    margin: 0 0 20px 0;
+  //  }
+  //}
 }
 footer {
   width: 100%;
