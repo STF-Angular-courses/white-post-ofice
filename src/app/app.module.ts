@@ -9,6 +9,7 @@ import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@ang
 import { ClientItemComponent } from './client-item/client-item.component';
 import { PackageItemComponent } from './package-item/package-item.component';
 import { ItemInfoComponent } from './item-info/item-info.component';
+import { PackageListComponent } from './package-list/package-list.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ItemInfoComponent } from './item-info/item-info.component';
     PostDepartmentComponent,
     ClientItemComponent,
     PackageItemComponent,
-    ItemInfoComponent
+    ItemInfoComponent,
+    PackageListComponent
   ],
   imports: [
     BrowserModule,

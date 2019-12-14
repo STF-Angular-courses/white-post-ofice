@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import Person from '../../shared/models/person';
-import {PostCompany} from '../../shared/models/post-company';
-import Package from '../../shared/models/package';
-import PostDepartment from '../../shared/models/post-department';
+import Person from '../../common/models/person';
+import {PostCompany} from '../../common/models/post-company';
+import Package from '../../common/models/package';
+import PostDepartment from '../../common/models/post-department';
 
 @Component({
   selector: 'app-item-info',

@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PostCompany} from '../../shared/models/post-company';
-import Package from '../../shared/models/package';
+import {PostCompany} from '../../common/models/post-company';
+import Package from '../../common/models/package';
+import { IPackage } from '../../common/models/interfaces/package-interface';
 
 @Component({
   selector: 'app-package-item',
@@ -8,7 +9,7 @@ import Package from '../../shared/models/package';
   styleUrls: ['./package-item.component.scss']
 })
 export class PackageItemComponent implements OnInit {
-  @Input() package;
+  @Input() package: IPackage;
   @Output() packageDetail = new EventEmitter<Package>();
 
   constructor() { }

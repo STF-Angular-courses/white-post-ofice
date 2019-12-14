@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import Person from '../../shared/models/person';
-import {PostCompany} from '../../shared/models/post-company';
+import Person from '../../common/models/person';
+import {PostCompany} from '../../common/models/post-company';
 
 @Component({
   selector: 'app-client-item',

@@ -4,6 +4,8 @@ import {IOrganisation} from './interfaces/organisation-interface';
 import {IPackage} from './interfaces/package-interface';
 import Organisation from './organisation';
 import {PostCompany} from './post-company';
+import Package from './package';
+import { IPerson } from './interfaces/person-interface';
 
 export default class PostDepartment extends  Organisation implements  IPostDepartment, ILogger {
   constructor(

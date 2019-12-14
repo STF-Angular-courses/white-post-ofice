@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import PostDepartment from '../../shared/models/post-department';
-import {PostCompany} from '../../shared/models/post-company';
+import PostDepartment from '../../common/models/post-department';
+import {PostCompany} from '../../common/models/post-company';
 
 @Component({
   selector: 'app-post-department',

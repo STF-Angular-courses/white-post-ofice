@@ -4,10 +4,10 @@ import {IPerson} from './interfaces/person-interface';
 import {IPackage} from './interfaces/package-interface';
 import {IPostDepartment} from './interfaces/post-department-interface';
 
-export default class Package implements IPackage, ILogger {
+export default class Package implements IPackage {
   constructor(public client: IOrganisation | IPerson,
-              public startingPoint: IPostDepartment,
               public destinationPoint: IPostDepartment,
+              public startingPoint: IPostDepartment,
               public name: string,
               public type: string,
               public price: string,
@@ -16,7 +16,9 @@ export default class Package implements IPackage, ILogger {
               public weight: string,
               public screen: string,
               public description: string) { }
-  logData() {
+
+
+  /*logData() {
     console.log(`------ Package ------
         Client: ${this.client}
         Starting point: ${this.startingPoint}
@@ -26,5 +28,5 @@ export default class Package implements IPackage, ILogger {
         Height: ${this.height}
         Width: ${this.width}
         Wight: ${this.weight}`);
-  }
+  }*/
 }
