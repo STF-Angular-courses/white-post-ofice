@@ -14,8 +14,8 @@ export default class Package implements IPackage, ILogger {
     public width: string,
     public weight: string,
     public price: string,
-    public startingPoint: PostDepartment,
-    public destinationPoint: PostDepartment,
+    public startingPointID: string,
+    public destinationPointID: string,
   ) { }
   logData() {
     console.log(
@@ -29,8 +29,10 @@ export default class Package implements IPackage, ILogger {
       'Weight: ' + this.weight + '\n' +
       'Height: ' + this.height + '\n' +
       'Width: ' + this.width + '\n' +
-      (this.startingPoint ? ('Sent from: ' + this.startingPoint.name +  '\n') : '') +
-      (this.destinationPoint ? ('Received: ' + this.destinationPoint.name +  '\n') : '')
+      'Starting Point ID: ' + this.startingPointID + '\n',
+      'Destination Point ID: ' + this.destinationPointID + '\n',
+      // (this.startingPoint ? ('Sent from: ' + this.startingPoint.name +  '\n') : '') +
+      // (this.destinationPoint ? ('Received: ' + this.destinationPoint.name +  '\n') : '')
     );
   }
 }

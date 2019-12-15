@@ -12,6 +12,7 @@ import {PostDepartmentComponent} from './post-structs/post-department/post-depar
 import {ClientItemComponent} from './post-clients/client-item/client-item.component';
 import {PackageItemComponent} from './post-packages/package-item/package-item.component';
 import {ItemInfoComponent} from './item-detail/item-info.component';
+import { DepartmentListComponent } from './post-structs/department-list/department-list.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {ItemInfoComponent} from './item-detail/item-info.component';
     ItemInfoComponent,
     ClientListComponent,
     PackageListComponent,
-    PostListComponent
+    PostListComponent,
+    DepartmentListComponent
   ],
   imports: [
     BrowserModule,

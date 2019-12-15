@@ -35,21 +35,26 @@
         >
           LIST OF POST COMPANIES
         </h1>
-        <app-post-list *ngIf="showPostList" (postCompanyDetail) = "showItemInfo($event)"></app-post-list>
-        <app-package-list *ngIf="showPackList"></app-package-list>
+        <app-post-list *ngIf="showPostList" (postCompanyDetail) = "showItemDetail($event)"></app-post-list>
         <h1
           *ngIf="showClientList"
           style="text-align: center; margin-top: 0; font-size: 1.5em "
         >
           TOP CLIENTS
         </h1>
-        <app-client-list *ngIf="showClientList" (clientDetail)="showItemInfo($event)"></app-client-list>
+        <app-client-list *ngIf="showClientList" (clientDetail)="showItemDetail($event)"></app-client-list>
+        <h1
+          *ngIf="showPackList"
+          style="text-align: center; margin-top: 0; font-size: 1.5em "
+        >
+          PACKAGE LIST
+        </h1>
+        <app-package-list *ngIf="showPackList"></app-package-list>
         <!--        ITEM DETAIL          -->
         <app-item-info
           *ngIf="viewItem"
           [item]="viewItem"
-          (goBack)="showList($event)"
-          (postDepartmentDetail)="showItemInfo($event)"
+          (showList)="showList($event)"
         ></app-item-info>
       </div>
     </main>

@@ -80,9 +80,8 @@ export class AppComponent implements OnInit {
         this.viewItem = undefined;
       }
     }
-
   }
-  showItemInfo(item: any) {
+  showItemDetail(item: any) {
     if (item instanceof PostCompany) {
       this.viewItem = item as PostCompany;
     } else if (item instanceof Person) {
@@ -97,3 +96,6 @@ export class AppComponent implements OnInit {
     this.showPackList = false;
   }
 }
+
+
+

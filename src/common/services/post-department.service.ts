@@ -14,7 +14,7 @@ export class PostDepartmentService {
       '111-111-11-11',
       'assets/department.jpg',
       'Some description',
-      'CD0001',
+      'C0001',
       []
     ),
     new PostDepartment(
@@ -25,7 +25,7 @@ export class PostDepartmentService {
       '111-111-11-22',
       'assets/department.jpg',
       'Some description',
-      'CD0001',
+      'C0001',
       []
     ),
     new PostDepartment(
@@ -36,7 +36,7 @@ export class PostDepartmentService {
       '222-222-22-11',
       'assets/department.jpg',
       'Some description',
-      'CD0002',
+      'C0002',
       []
     ),
     new PostDepartment(
@@ -47,7 +47,7 @@ export class PostDepartmentService {
       '222-222-222-22',
       'assets/department.jpg',
       'Some description',
-      'CD0002',
+      'C0002',
       []
     ),
   ];

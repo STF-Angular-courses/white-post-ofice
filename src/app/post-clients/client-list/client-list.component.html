@@ -1,4 +1,8 @@
 <div class="container">
+  <mat-card-actions align="end">
+    <button mat-button color="primary" class="add-btn">ADD CLIENT</button>
+    <button mat-button color="warn" class="remove-btn">REMOVE CLIENT</button>
+  </mat-card-actions>
   <ul class="client-list">
     <li *ngFor="let client of clients">
       <app-client-item [client]="client" (clientDetail)="showDetail($event)"></app-client-item>

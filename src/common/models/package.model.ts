@@ -12,6 +12,8 @@ export interface IPackage {
   width: string;
   weight: string;
   price: string;
-  startingPoint: PostDepartment;
-  destinationPoint: PostDepartment;
+  // startingPoint: PostDepartment;
+  // destinationPoint: PostDepartment;
+  startingPointID: string;
+  destinationPointID: string;
 }

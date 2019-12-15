@@ -1,7 +1,9 @@
 mat-card {
   display: flex;
+  background: #f7f7f7;
+
   .logo {
-    align-self: flex-start;
+    align-self: center;
   }
   .info-block {
     width: 100%;

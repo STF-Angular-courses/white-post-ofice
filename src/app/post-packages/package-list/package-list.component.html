@@ -1,1 +1,11 @@
-<p>package-list works!</p>
+<div class="container">
+  <mat-card-actions align="end">
+    <button mat-button color="primary" class="add-btn">ADD PACKAGE</button>
+    <button mat-button color="warn" class="remove-btn">REMOVE PACKAGE</button>
+  </mat-card-actions>
+  <ul class="post-list">
+    <li *ngFor="let pack of packageList">
+      <app-post-item [postCompany]="company" (postCompanyDetail)="showDetail($event)" [showDepartmentList]="false"></app-post-item>
+    </li>
+  </ul>
+</div>

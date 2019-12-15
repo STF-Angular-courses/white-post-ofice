@@ -7,7 +7,7 @@ import Package from '../../../common/contracts/package';
   styleUrls: ['./package-item.component.scss']
 })
 export class PackageItemComponent implements OnInit {
-  @Input() package;
+  @Input() package: Package;
   @Output() packageDetail = new EventEmitter<Package>();
 
   constructor() { }

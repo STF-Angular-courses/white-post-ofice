@@ -1,8 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import PostDepartment from "../../common/contracts/post-department";
-import Person from "../../common/contracts/person";
-import {PostCompany} from "../../common/contracts/post-company";
-import Package from "../../common/contracts/package";
+import PostDepartment from '../../common/contracts/post-department';
+import Person from '../../common/contracts/person';
+import {PostCompany} from '../../common/contracts/post-company';
+import Package from '../../common/contracts/package';
 
 
 @Component({
@@ -12,33 +12,45 @@ import Package from "../../common/contracts/package";
 })
 export class ItemInfoComponent implements OnInit {
   @Input() item: any;
-  @Output() goBack = new EventEmitter<any>();
-  @Output() postDepartmentDetail = new EventEmitter<PostDepartment>();
-
-  // @Output() goBack = new EventEmitter<Package | Person | PostCompany>();
+  @Output() showList = new EventEmitter<any>();
+  @Output() showDetail = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {}
   isClientPerson(): boolean {
-    this.item = this.item as Person;
-    return this.item instanceof Person;
+    if (this.item instanceof Person) {
+      this.item = this.item as Person;
+      return true;
+    } else {
+      return false;
+    }
   }
   isPostCompany(): boolean {
-    this.item = this.item as PostCompany;
-    return this.item instanceof PostCompany;
+    if (this.item instanceof PostCompany) {
+      this.item = this.item as PostCompany;
+      return true;
+    } else {
+      return false;
+    }
   }
   isPackage(): boolean {
-    this.item = this.item as Package;
-    return this.item instanceof Package;
+    if (this.item instanceof Package) {
+      this.item = this.item as Package;
+      return true;
+    } else {
+      return false;
+    }
   }
   isPostDepartment(): boolean {
-    this.item = this.item as PostDepartment;
-    return this.item instanceof PostDepartment;
+    if (this.item instanceof PostDepartment) {
+      this.item = this.item as PostDepartment;
+      return true;
+    } else {
+      return false;
+    }
   }
-  back(): void {
-    this.goBack.emit(this.item);
-  }
-  viewDetail(event: PostDepartment): void {
-    this.postDepartmentDetail.emit(event);
+
+  viewDetail(event: any): void {
+    this.showDetail.emit(event);
   }
 }
