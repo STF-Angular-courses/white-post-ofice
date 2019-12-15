@@ -5,7 +5,10 @@
   </mat-card-actions>
   <ul class="post-list">
     <li *ngFor="let company of postCompanyList">
-      <app-post-item [postCompany]="company" (postCompanyDetail)="showDetail($event)" [showDepartmentList]="false"></app-post-item>
+      <app-post-item
+        [postCompany]="company"
+        (postCompanyDetail)="showDetail($event)"
+        [showDepartmentList]="false"></app-post-item>
     </li>
   </ul>
 </div>

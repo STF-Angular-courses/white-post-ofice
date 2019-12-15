@@ -49,7 +49,6 @@ export class ItemInfoComponent implements OnInit {
       return false;
     }
   }
-
   viewDetail(event: any): void {
     this.showDetail.emit(event);
   }
