@@ -20,7 +20,7 @@ export class PackageService {
       price: '30',
       description: 'Very important letter for my dog!',
       name: 'MyLetter1',
-      screen: '--some screen--'
+      screen: 'email'
     },
     {
       client: clientItemsData[1],
@@ -33,7 +33,7 @@ export class PackageService {
       price: '150',
       description: 'Empty box',
       name: 'Package 1',
-      screen: '--some screen--'
+      screen: 'local_mall'
     }
   ];
 }
