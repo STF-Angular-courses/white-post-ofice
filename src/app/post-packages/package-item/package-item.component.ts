@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IPackage} from '../../../common/models/package.model';
 import Package from '../../../common/contracts/package';
 
 @Component({

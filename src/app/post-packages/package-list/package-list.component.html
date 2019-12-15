@@ -1,1 +1,4 @@
-<p>package-list works!</p>
+<h1>Packages list!</h1>
+<div>
+  <app-package-item *ngFor="let itemPackage of packageService.packageList" [package]="itemPackage" (packageDetail)="showDetail($event)"></app-package-item>
+</div>

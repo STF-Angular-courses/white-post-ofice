@@ -36,7 +36,7 @@
           LIST OF POST COMPANIES
         </h1>
         <app-post-list *ngIf="showPostList" (postCompanyDetail) = "showItemInfo($event)"></app-post-list>
-        <app-package-list *ngIf="showPackList"></app-package-list>
+        <app-package-list *ngIf="showPackList" (packageDetail)="showItemInfo($event)"></app-package-list>
         <h1
           *ngIf="showClientList"
           style="text-align: center; margin-top: 0; font-size: 1.5em "
