@@ -1,0 +1,7 @@
+<div class="container">
+  <ul class="client-list">
+    <li *ngFor="let client of clients">
+      <app-client-item [client]="client" (clientDetail)="showDetail($event)"></app-client-item>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+<div class="container">
+  <ul class="post-list">
+    <li *ngFor="let company of postCompanyList">
+      <app-post-item [postCompany]="company" (postCompanyDetail)="showDetail($event)"></app-post-item>
+    </li>
+  </ul>
+</div>
