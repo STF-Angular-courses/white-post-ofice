@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   showPostList = true;
   showClientList = false;
   showPackList = false;
+  showDepList = false;
   selectedItem = false;
   viewItem: any;
   postCompanyList: PostCompany[];
@@ -41,16 +42,26 @@ export class AppComponent implements OnInit {
           this.showPostList = true;
           this.showClientList = false;
           this.showPackList = false;
+          this.showDepList = false;
           this.viewItem = undefined;
           break;
         case 'client-btn':
           this.showClientList = true;
           this.showPackList = false;
           this.showPostList = false;
+          this.showDepList = false;
           this.viewItem = undefined;
           break;
         case 'pack-btn':
           this.showPackList = true;
+          this.showClientList = false;
+          this.showPostList = false;
+          this.showDepList = false;
+          this.viewItem = undefined;
+          break;
+        case 'dep-btn':
+          this.showDepList = true;
+          this.showPackList = false;
           this.showClientList = false;
           this.showPostList = false;
           this.viewItem = undefined;
@@ -67,16 +78,24 @@ export class AppComponent implements OnInit {
         this.showPostList = false;
         this.showClientList = false;
         this.showPackList = true;
+        this.showDepList = false;
         this.viewItem = undefined;
       } else if (event instanceof Person) {
         this.showPostList = false;
         this.showClientList = true;
         this.showPackList = false;
+        this.showDepList = false;
         this.viewItem = undefined;
+      } else if (event instanceof PostDepartment) {
+        this.showPostList = false;
+        this.showClientList = false;
+        this.showPackList = false;
+        this.showDepList = true;
       } else {
         this.showPostList = true;
         this.showClientList = false;
         this.showPackList = false;
+        this.showDepList = false;
         this.viewItem = undefined;
       }
     }

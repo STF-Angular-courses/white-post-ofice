@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card-actions align="end">
-    <button mat-button color="primary" class="add-btn">ADD DEPARTMENT</button>
-    <button mat-button color="warn" class="remove-btn">REMOVE DEPARTMENT</button>
+    <button mat-button color="primary" class="add-btn" (click)="add()">ADD DEPARTMENT</button>
+    <button mat-button color="warn" class="remove-btn" (click)="postDepartmentService.remove()">REMOVE DEPARTMENT</button>
   </mat-card-actions>
   <ul class="post-list">
     <li *ngFor="let department of postDepartmentList">

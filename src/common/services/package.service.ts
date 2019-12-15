@@ -10,7 +10,7 @@ export class PackageService {
       'PL0001',
       'HB0001',
       'letter',
-      'Letter X',
+      'MyLetter1',
       'assets/letter-ico.jpg',
       'Very important letter for my dog!',
       '0.15',
@@ -24,7 +24,7 @@ export class PackageService {
       'PB0001',
       'HB0001',
       'wrapper',
-      'Wrapper Y',
+      'Package 1',
       'assets/wrapper.jpg',
       'Some description',
       '1.15',
@@ -38,7 +38,7 @@ export class PackageService {
       'P0001',
       'HB0001',
       'box',
-      'Package 1',
+      'Package 2',
       'assets/box.jpg',
       'Empty box',
       '0.7',
@@ -52,7 +52,7 @@ export class PackageService {
   add(pack: Package): void {
     this.packageList.push(pack);
   }
-  remove(pack: Package | undefined): void {
+  remove(pack?: Package): void {
     if (pack) {
       try {
         const index = this.packageList.indexOf(pack);

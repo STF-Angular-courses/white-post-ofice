@@ -18,4 +18,21 @@ export class PostListComponent implements OnInit {
   showDetail(item: PostCompany) {
     this.postCompanyDetail.emit(item);
   }
+  add() {
+    this.postService.add(
+      new PostCompany(
+        'C0001',
+        'Company',
+        'Nova Poshta',
+        'Stolychne shose str, 103, Kyiv, Ukraine',
+        '111-111-11',
+        'Mr X.',
+        'assets/nova.png',
+        'Is a private Ukrainian postal and courier company ' +
+        'that provides express delivery of documents, freight and parcels ' +
+        'for individuals and businesses. In 2017, the company delivered over ' +
+        '145 million shipments, through the company\'s 2300 branches throughout the country.'
+      )
+    );
+  }
 }

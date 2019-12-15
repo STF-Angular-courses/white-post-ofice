@@ -47,12 +47,20 @@ export class ClientService {
   add(client: IClient): void {
     this.clientList.push(client);
   }
-  remove(client: IClient): void {
-    try {
-      const index = this.clientList.indexOf(client);
-      this.clientList.splice(index, 1);
-    } catch  {
-      console.log('Item not found');
+  remove(client?: IClient): void {
+    if (client) {
+      try {
+        const index = this.clientList.indexOf(client);
+        this.clientList.splice(index, 1);
+      } catch  {
+        console.log('Item not found');
+      }
+    } else {
+      try {
+        this.clientList.splice(this.clientList.length - 1, 1);
+      } catch   {
+        console.log('Error');
+      }
     }
   }
 }

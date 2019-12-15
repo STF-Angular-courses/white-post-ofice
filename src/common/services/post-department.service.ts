@@ -52,15 +52,23 @@ export class PostDepartmentService {
     ),
   ];
   constructor() { }
-  add(client: PostDepartment): void {
-    this.postDepartmentList.push(client);
+  add(dep: PostDepartment): void {
+    this.postDepartmentList.push(dep);
   }
-  remove(client: PostDepartment): void {
-    try {
-      const index = this.postDepartmentList.indexOf(client);
-      this.postDepartmentList.splice(index, 1);
-    } catch  {
-      console.log('Item not found');
+  remove(dep?: PostDepartment): void {
+    if (dep) {
+      try {
+        const index = this.postDepartmentList.indexOf(dep);
+        this.postDepartmentList.splice(index, 1);
+      } catch  {
+        console.log('Item not found');
+      }
+    } else {
+      try {
+        this.postDepartmentList.splice(this.postDepartmentList.length - 1, 1);
+      } catch  {
+        console.log('Error');
+      }
     }
   }
 }

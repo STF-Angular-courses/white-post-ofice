@@ -35,12 +35,22 @@ export class PostService {
   add(postCompany: PostCompany): void {
     this.postCompanyList.push(postCompany);
   }
-  remove(postCompany: PostCompany): void {
-    try {
-      const index = this.postCompanyList.indexOf(postCompany);
-      this.postCompanyList.splice(index, 1);
-    } catch  {
-      console.log('Item not found');
+  remove(postCompany?: PostCompany): void {
+    if (postCompany) {
+      try {
+        const index = this.postCompanyList.indexOf(postCompany);
+        this.postCompanyList.splice(index, 1);
+      } catch  {
+        console.log('Item not found');
+      }
+    } else {
+      try {
+        this.postCompanyList.splice(this.postCompanyList.length - 1, 1);
+      } catch {
+        console.log('Error');
+      }
     }
   }
+
+
 }
