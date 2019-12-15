@@ -1,6 +1,76 @@
-<header>
-</header>
-<main>
-</main>
-<footer>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <span class="logo"><a href="#">Logo</a></span>
+      <nav class="top-nav">
+        <ul class="top-nav-list">
+          <li><a href="#">item</a></li>
+          <li><a href="#">item</a></li>
+          <li><a href="#">item</a></li>
+          <li><a href="#">item</a></li>
+          <li><a href="#">item</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <span (click)="showList($event)" id="post-btn">Post</span>
+        <span (click)="showList($event)" id="client-btn">Clients</span>
+        <span (click)="showList($event)" id="pack-btn">Packages</span>
+        <span (click)="showList($event)" id="dep-btn">Departments</span>
+      </aside>
+      <div class="content">
+        <h1
+          *ngIf="showPostList"
+          style="text-align: center; margin-top: 0; font-size: 1.5em "
+        >
+          LIST OF POST COMPANIES
+        </h1>
+        <app-post-list *ngIf="showPostList" (postCompanyDetail) = "showItemDetail($event)"></app-post-list>
+        <h1
+          *ngIf="showClientList"
+          style="text-align: center; margin-top: 0; font-size: 1.5em "
+        >
+          TOP CLIENTS
+        </h1>
+        <app-client-list *ngIf="showClientList" (clientDetail)="showItemDetail($event)"></app-client-list>
+        <h1
+          *ngIf="showPackList"
+          style="text-align: center; margin-top: 0; font-size: 1.5em "
+        >
+          PACKAGE LIST
+        </h1>
+        <app-package-list *ngIf="showPackList" (packageDetail)="showItemDetail($event)"></app-package-list>
+        <h1
+          *ngIf="showDepList"
+          style="text-align: center; margin-top: 0; font-size: 1.5em "
+        >
+          DEPARTMENT LIST
+        </h1>
+        <app-department-list
+          *ngIf="showDepList"
+          (postDepartmentDetail)="showItemDetail($event)"
+          [showAll]="true"></app-department-list>
+        <!--        ITEM DETAIL          -->
+        <app-item-info
+          *ngIf="viewItem"
+          [item]="viewItem"
+          (showList)="showList($event)"
+        ></app-item-info>
+      </div>
+    </main>
+    <footer>
+      footer
+    </footer>
+  </body>
+</html>
