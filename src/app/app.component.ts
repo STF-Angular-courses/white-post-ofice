@@ -6,6 +6,7 @@ import {PostCompany} from '../common/contracts/post-company';
 import Person from '../common/contracts/person';
 import PostDepartment from '../common/contracts/post-department';
 import Package from '../common/contracts/package';
+import {IClient} from '../common/models/client.model';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
   viewItem: any;
   postCompanyList: PostCompany[];
   postDepartmentList: PostDepartment[];
-  clientsList: Person[];
+  clientsList: IClient[];
 
   constructor(
     private postService: PostService,

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PostCompany} from '../../shared/contracts/post-company';
+import {PostCompany} from '../../../common/contracts/post-company';
 
 @Component({
   selector: 'app-post-item',
@@ -7,13 +7,13 @@ import {PostCompany} from '../../shared/contracts/post-company';
   styleUrls: ['./post-item.component.scss']
 })
 export class PostItemComponent implements OnInit {
-  @Input() postItem: PostCompany;
-  @Output() postDetail = new EventEmitter<PostCompany>();
+  @Input() postCompany: PostCompany;
+  @Output() postCompanyDetail = new EventEmitter<PostCompany>();
   constructor() { }
 
   ngOnInit() {
   }
   viewMore(): void {
-    this.postDetail.emit(this.postItem);
+    this.postCompanyDetail.emit(this.postCompany);
   }
 }

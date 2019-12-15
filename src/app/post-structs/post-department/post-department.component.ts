@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import PostDepartment from '../../shared/contracts/post-department';
-import {PostCompany} from '../../shared/contracts/post-company';
+import PostDepartment from '../../../common/contracts/post-department';
 
 @Component({
   selector: 'app-post-department',

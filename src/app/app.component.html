@@ -35,8 +35,7 @@
         >
           LIST OF POST COMPANIES
         </h1>
-        <app-client-list *ngIf="showClientList" (clientDetail)="showItemInfo($event)"></app-client-list>
-        <app-post-list *ngIf="showPostList"></app-post-list>
+        <app-post-list *ngIf="showPostList" (postCompanyDetail) = "showItemInfo($event)"></app-post-list>
         <app-package-list *ngIf="showPackList"></app-package-list>
         <h1
           *ngIf="showClientList"
@@ -44,6 +43,7 @@
         >
           TOP CLIENTS
         </h1>
+        <app-client-list *ngIf="showClientList" (clientDetail)="showItemInfo($event)"></app-client-list>
         <!--        ITEM DETAIL          -->
         <app-item-info
           *ngIf="viewItem"
