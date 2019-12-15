@@ -9,7 +9,7 @@ export class ClientService {
   clientList: IClient[] = [
     new Person(
       'Ivan Ivanov',
-      '1',
+      'HB0001',
       33,
       'HB0000',
       'individual',
