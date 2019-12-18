@@ -1,0 +1,17 @@
+mat-card {
+  display: flex;
+  flex-direction: column;
+  .logo {
+    display: block;
+    height: 168px;
+    max-width: 300px;
+    align-self: center;
+  }
+  .info-block {
+    margin-top: 30px;
+    width: 100%;
+    mat-card-actions {
+      margin-bottom: 0;
+    }
+  }
+}
