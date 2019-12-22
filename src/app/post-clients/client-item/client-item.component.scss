@@ -1,6 +1,7 @@
 mat-card {
   display: flex;
   flex-direction: column;
+  background: #f7f7f7;
   .logo {
     display: block;
     height: 168px;
@@ -12,6 +13,9 @@ mat-card {
     width: 100%;
     mat-card-actions {
       margin-bottom: 0;
+      button {
+        text-transform: uppercase;
+      }
     }
   }
 }
