@@ -1,7 +1,7 @@
 import Person from '../contracts/person.contract';
 import Organisation from '../contracts/abstract-organisation.contract';
 
-export  interface Foundation {
+export  interface OrganisationModel {
   id: string;
   type: string;
   name: string;

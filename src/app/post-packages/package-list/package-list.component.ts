@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Package} from '../../../common/models/package.model';
 import {PackageService} from '../../../common/services/package.service';
+import Package from '../../../common/contracts/package';
+import {PackageModel} from '../../../common/models/package.model';
 
 @Component({
   selector: 'app-package-list',
@@ -8,10 +9,10 @@ import {PackageService} from '../../../common/services/package.service';
   styleUrls: ['./package-list.component.scss']
 })
 export class PackageListComponent {
-  @Input() packageList: Package[];
-  @Output() packageDetail = new EventEmitter<Package>();
+  @Input() packageList: Package[] | PackageModel[];
+  @Output() packageDetail = new EventEmitter<Package | PackageModel>();
   constructor(private packageService: PackageService) {}
-  showDetail(item: Package) {
+  showDetail(item: Package | PackageModel) {
     this.packageDetail.emit(item);
   }
 }

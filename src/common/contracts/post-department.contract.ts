@@ -1,21 +1,23 @@
 import {ILogger} from '../interfaces/logger-interface';
-import {Package} from '../models/package.model';
-import {PostDepartment} from '../models/post-department.model';
 import Organisation from './abstract-organisation.contract';
+import {PostDepartmentModel} from '../models/post-department.model';
+import Package from './package';
+import {PackageModel} from '../models/package.model';
 
-export default class PostOffice extends  Organisation implements  PostDepartment, ILogger {
+export default class PostDepartment extends  Organisation implements  PostDepartmentModel, ILogger {
   constructor(
-    id: string,
-    type: string,
+    public id: string,
+    public type: string,
     public name: string,
-    address: string,
-    telephone: string,
+    public address: string,
+    public telephone: string,
     public screen: string,
     public description: string,
     public parent: string,
-    public packages: Package[] = []
+    public owner: string,
+    public packages: Package[] | PackageModel[] = []
   ) {
-    super(id, type, address, telephone);
+    super();
   }
   logData() {
     console.log(

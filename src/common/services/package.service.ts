@@ -1,15 +1,12 @@
-import { Injectable } from '@angular/core';
-import {Package} from '../models/package.model';
-import Letter from '../contracts/letter.contract';
-import Box from '../contracts/box.contract';
-import Wrapper from '../contracts/wrapper.contract';
+import Package from '../contracts/package';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PackageService {
   packageList: Package[]  = [
-    new Letter (
+    new Package (
       'MyLetter1',
       'assets/letter-ico.jpg',
       'Very important letter for my dog!',
@@ -21,9 +18,10 @@ export class PackageService {
       'letter',
       '0.66',
       'CD0001-00',
-      'CD0001-01'
+      'CD0001-01',
+      ''
     ),
-    new Wrapper (
+    new Package (
       'Wrapper 1',
       'assets/wrapper.jpg',
       'Constitution of Ukraine wrapper',
@@ -35,9 +33,10 @@ export class PackageService {
       'wrapper',
       '1.2',
       'CD0001-01',
-      'CD0002-00'
+      'CD0002-00',
+      ''
     ),
-    new Box (
+    new Package (
       ' Package Box 2',
       ' assets/box.jpg',
       'Empty box',
@@ -49,14 +48,15 @@ export class PackageService {
       'box',
       '30',
       'CD0002-00',
-      'CD0002-01'),
+      'CD0002-01',
+      ''),
   ];
   constructor() { }
   add(pack?: Package): void {
     if (!pack) {
       // TODO: TEST FUNCTIONAL, TO DELETE IN FUTURE
       this.packageList.push(
-        new Box (
+        new Package (
           ' Package Box 3',
           ' assets/box.jpg',
           'Empty box',
@@ -68,7 +68,8 @@ export class PackageService {
           'box',
           '30',
           'CD0001-01',
-          'CD0001-00'),
+          'CD0001-00',
+          ''),
       );
       return;
     }

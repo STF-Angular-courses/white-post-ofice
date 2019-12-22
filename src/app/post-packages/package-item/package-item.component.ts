@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Package} from '../../../common/models/package.model';
+import Package from '../../../common/contracts/package';
 
 @Component({
   selector: 'app-package-item',

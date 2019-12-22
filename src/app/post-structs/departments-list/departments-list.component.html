@@ -7,7 +7,7 @@
       mat-button
       color="primary"
       class="add-btn"
-      (click)="postOfficeService.add()"
+      (click)="postDepartmentService.add()"
     >
       Add office
     </button>
@@ -15,18 +15,18 @@
       mat-button
       color="warn"
       class="remove-btn"
-      (click)="postOfficeService.remove()"
+      (click)="postDepartmentService.remove()"
     >
       Remove office
     </button>
   </mat-card-actions>
   <ul class="post-list">
-    <li *ngFor="let office of postOfficeList">
-      <app-post-office
-        [office]="office"
-        (postOfficeDetail)="showDetail($event)"
+    <li *ngFor="let department of postDepartmentList">
+      <app-post-department
+        [department]="department"
+        (postDepartmentDetail)="showDetail($event)"
       >
-      </app-post-office>
+      </app-post-department>
     </li>
   </ul>
 </div>

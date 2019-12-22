@@ -1,14 +1,12 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
 import {PostService} from '../common/services/post.service';
 import {ClientService} from '../common/services/client.service';
 import {PostCompany} from '../common/contracts/post-company.contract';
-import PostOffice from '../common/contracts/post-office.contract';
-import {Client} from '../common/models/client.model';
-import {PostOfficeService} from '../common/services/post-office.service';
-import {Package} from '../common/models/package.model';
 import {PackageService} from '../common/services/package.service';
-import Organisation from '../common/contracts/abstract-organisation.contract';
-import {ItCompany} from '../common/contracts/it-company.contract';
+import {Component, OnInit} from '@angular/core';
+import PostDepartment from '../common/contracts/post-department.contract';
+import Client from '../common/contracts/client.contract';
+import Package from '../common/contracts/package';
+import {PostDepartmentService} from '../common/services/post-department.service';
 
 @Component({
   selector: 'app-root',
@@ -17,23 +15,23 @@ import {ItCompany} from '../common/contracts/it-company.contract';
 })
 export class AppComponent implements OnInit {
   postCompanyList: PostCompany[];
-  postDepartmentList: PostOffice[];
+  postDepartmentList: PostDepartment[];
   clientsList: Client[];
   packageList: Package[];
   showPostList = true;
   showClientList = false;
   showPackageList = false;
   showPostOfficesList = false;
-  itemToDetail: PostCompany | PostOffice | Client | Package ;
+  itemToDetail: PostCompany | PostDepartment | Client | Package ;
   constructor(
     private postService: PostService,
-    private postOfficeService: PostOfficeService,
+    private postOfficeService: PostDepartmentService,
     private clientService: ClientService,
     private packageService: PackageService
   ) { }
   ngOnInit(): void {
     this.postCompanyList = this.postService.postCompanyList;
-    this.postDepartmentList = this.postOfficeService.postOfficesList;
+    this.postDepartmentList = this.postOfficeService.postDepartmentList;
     this.clientsList = this.clientService.clientList;
     this.packageList = this.packageService.packageList;
   }
@@ -41,20 +39,6 @@ export class AppComponent implements OnInit {
     this.hideAllList();
     this.itemToDetail = event;
   }
-  // TODO: NOT USING IN THIS MOMENT
-  // postOfficeDetail(event: PostOffice) {
-  //   this.hideAllList();
-  //   this.itemToDetail = event;
-  // }
-  // clientDetail(event: Client) {
-  //   this.hideAllList();
-  //   this.itemToDetail = event;
-  // }
-  // packageDetail(event: Package) {
-  //   this.hideAllList();
-  //   this.itemToDetail = event;
-  // }
-  //
   hideAllList() {
     this.showPostList = false;
     this.showClientList = false;

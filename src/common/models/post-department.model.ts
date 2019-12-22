@@ -1,6 +1,7 @@
-import {Package} from './package.model';
-import {Department} from './department.model';
+import {DepartmentModel} from './department.model';
+import {PackageModel} from './package.model';
+import Package from '../contracts/package';
 
-export   interface PostDepartment extends  Department {
-  packages: Package[];
+export   interface PostDepartmentModel extends  DepartmentModel {
+  packages: Package[]  | PackageModel[];
 }

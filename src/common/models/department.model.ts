@@ -1,5 +1,5 @@
 import Organisation from '../contracts/abstract-organisation.contract';
 
-export   interface Department {
+export   interface DepartmentModel {
    parent: Organisation | string;
 }

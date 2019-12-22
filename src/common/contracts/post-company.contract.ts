@@ -1,22 +1,22 @@
 import {ILogger} from '../interfaces/logger-interface';
-import {PostDepartment} from '../models/post-department.model';
 import Person from './person.contract';
 import Organisation from './abstract-organisation.contract';
-import {PostFoundation} from '../models/post-foundation.model';
+import PostDepartment from './post-department.contract';
+import {PostCompanyModel} from '../models/post-company.model';
 
-export class PostCompany extends Organisation implements  PostFoundation, ILogger {
+export class PostCompany extends Organisation implements  PostCompanyModel, ILogger {
   constructor(
-     id: string,
-     type: string,
+     public id: string,
+     public type: string,
      public name: string,
-     address: string,
-     telephone: string,
-     owner: string | Organisation | Person,
+     public address: string,
+     public telephone: string,
+     public owner: string | Organisation | Person,
      public screen: string,
      public description: string,
-     public departments: PostDepartment[] = []
+     public departments: PostDepartment[] | string[] = []
   ) {
-    super(id, type, address, telephone, owner);
+    super();
   }
   logData() {
     console.log(`

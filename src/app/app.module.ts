@@ -10,26 +10,26 @@ import { PostListComponent } from './post-structs/post-list/post-list.component'
 import {PostItemComponent} from './post-structs/post-company/post-item.component';
 import {ClientItemComponent} from './post-clients/client-item/client-item.component';
 import {PackageItemComponent} from './post-packages/package-item/package-item.component';
-import {OfficesListComponent} from './post-structs/offices-list/offices-list.component';
-import {PostOfficeComponent} from './post-structs/post-office/post-office.component';
-import {PostOfficeService} from '../common/services/post-office.service';
 import {PostService} from '../common/services/post.service';
 import {ClientService} from '../common/services/client.service';
 import {PackageService} from '../common/services/package.service';
 import { PostCompanyDetailComponent } from './post-company-detail/post-company-detail.component';
+import {PostDepartmentService} from '../common/services/post-department.service';
+import {PostDepartmentComponent} from './post-structs/post-department/post-department.component';
+import {DepartmentsListComponent} from './post-structs/departments-list/departments-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostItemComponent,
-    PostOfficeComponent,
+    PostDepartmentComponent,
+    DepartmentsListComponent,
     ClientItemComponent,
     PackageItemComponent,
     ClientListComponent,
     PackageListComponent,
     PostListComponent,
-    OfficesListComponent,
     PostCompanyDetailComponent
   ],
   imports: [
@@ -40,7 +40,7 @@ import { PostCompanyDetailComponent } from './post-company-detail/post-company-d
     MatButtonModule,
     MatListModule,
   ],
-  providers: [PostOfficeService, PostService, ClientService, PackageService],
+  providers: [PostDepartmentService, PostService, ClientService, PackageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

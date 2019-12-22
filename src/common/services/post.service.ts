@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {PostCompany} from '../contracts/post-company.contract';
-import Organisation from '../contracts/abstract-organisation.contract';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +17,8 @@ export class PostService {
       'Is a private Ukrainian postal and courier company ' +
       'that provides express delivery of documents, freight and parcels ' +
       'for individuals and businesses. In 2017, the company delivered over ' +
-      '145 million shipments, through the company\'s 2300 branches throughout the country.'
+      '145 million shipments, through the company\'s 2300 branches throughout the country.',
+      ['CD0001-00', 'CD0001-01']
     ), new PostCompany(
       'C0002',
       'Company',
@@ -29,11 +29,10 @@ export class PostService {
       'assets/ukr.png',
       'Is a public company of Ukraine with 100% state ownership ' +
       'due to its strategic importance. In 1999–2015 it was a unitary' +
-      ' enterprise of the government of Ukraine.'
+      ' enterprise of the government of Ukraine.',
+      ['CD0002-00', 'CD0002-01']
     )
   ];
-
-  constructor() { }
   add(postCompany?: PostCompany): void {
     if (!postCompany) {
       // TODO: TEST FUNCTIONAL, TO DELETE IN FUTURE

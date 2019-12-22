@@ -1,4 +1,4 @@
-export interface Package {
+export interface PackageModel {
   id: string;
   clientId: string;
   name: string;
@@ -6,6 +6,10 @@ export interface Package {
   description: string;
   type: string;
   price: string;
+  height: string;
+  width: string;
+  weight: string;
   startingPointID: string;
   destinationPointID: string;
+  receiver: string;
 }

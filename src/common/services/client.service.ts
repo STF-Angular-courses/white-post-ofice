@@ -1,78 +1,79 @@
 import { Injectable } from '@angular/core';
-import {Client} from '../models/client.model';
-import Person from '../contracts/person.contract';
-import {ItCompany} from '../contracts/it-company.contract';
+import Client from '../contracts/client.contract';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
   clientList: Client[] = [
-    new Person(
-      'Ivan Ivanov',
+    new Client(
       'HB0001',
       'male',
-      33,
-      'HB0000',
-      'individual',
+      'Ivan Ivanov',
       'Zavodska str, 4/1, Khmelnytskyi, Ukraine',
-      '093-102-120-11-11',
-      0.03,
+      'HB0000',
+      0.06,
       'assets/person1.jpg',
-      'Person #1 description'
+      '093-102-120-11-11',
+      [],
+      [''],
+      ['']
     ),
-    new Person(
-      'Petrov Sidiriv',
+    new Client(
       'HB0002',
       'male',
-      41,
-      'HB0001',
-      'individual',
+      'Petrov Sidiriv',
       'Trudova str, 14, Khmelnytskyi, Ukraine',
       '055-155-177-16-551',
-      0.05,
+      0.02,
       'assets/person2.jpg',
-      'Person #2 description'
-    ), new Person(
-      'Sergiy Ivanovych',
+      '',
+      [''],
+      ['', ''],
+      []
+    ),
+    new Client(
       'HB0003',
       'male',
-      22,
-      'HB0002',
-      'individual',
+      'Sergiy Ivanovych',
       'Tovstogo str, 38/2, Khmelnytskyi, Ukraine',
       '045-178-157-11-50',
-      0.055,
+      0.04,
       'assets/person3.jpg',
-      'Person #3 description'
+      'Description',
+      [],
+      [],
+      ['', '']
     ),
-    new ItCompany(
+    new Client(
       'CC0001',
       'company',
       'Some IT Company',
       'Karaganda, Some Country',
       '666-666-666',
-      'MR ZeRo',
+      0.1,
       'assets/microsoft.png',
-      'Some it company. Client from long time',
-      'corporate clients',
-      0.04,
+      'Description',
+      [],
+      [],
+      [],
     )
   ];
   add(client?: Client): void {
     if (!client) {
       this.clientList.push(
-        new ItCompany(
+        new Client(
           'CC0001',
-          'company',
+          'corporate client',
           'Some IT Company',
           'Karaganda, Some Country',
           '666-666-666',
-          'MR ZeRo',
+          0.11,
           'assets/microsoft.png',
           'Some it company. Client from long time',
-          'corporate clients',
-          0.04,
+          [],
+          [],
+          []
         )
       );
       return;

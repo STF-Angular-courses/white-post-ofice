@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import PostOffice from '../contracts/post-office.contract';
+import PostDepartment from '../contracts/post-department.contract';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostOfficeService {
-  postOfficesList = [
-    new PostOffice(
+export class PostDepartmentService {
+  postDepartmentList = [
+    new PostDepartment(
       'CD0001-00',
       'Departmant',
       'Post Department in Khmelnytskyi',
@@ -14,10 +14,11 @@ export class PostOfficeService {
       '111-111-11-11',
       'assets/department.jpg',
       'Some description',
+      '',
       'C0001',
       []
     ),
-    new PostOffice(
+    new PostDepartment(
       'CD0001-01',
       'Departmant',
       'Post Department in Lviv',
@@ -26,9 +27,10 @@ export class PostOfficeService {
       'assets/department.jpg',
       'Some description',
       'C0001',
+      '',
       []
     ),
-    new PostOffice(
+    new PostDepartment(
       'CD0002-00',
       'Departmant',
       'Ukr Post Department in Khmelnytskyi',
@@ -37,9 +39,10 @@ export class PostOfficeService {
       'assets/department.jpg',
       'Some description',
       'C0002',
+      '',
       []
     ),
-    new PostOffice(
+    new PostDepartment(
       'CD0002-01',
       'Departmant',
       'Ukr Post Department in Poltava',
@@ -48,14 +51,15 @@ export class PostOfficeService {
       'assets/department.jpg',
       'Some description',
       'C0002',
+      '',
       []
     ),
   ];
   constructor() { }
-  add(department?: PostOffice): void {
+  add(department?: PostDepartment): void {
     if (!department) {
       // TODO: TEST DATA. REMOVE IN FUTURE.
-      this.postOfficesList.push(new PostOffice(
+      this.postDepartmentList.push(new PostDepartment(
         'CD0001-00',
         'Departmant',
         'Post Department in Khmelnytskyi',
@@ -64,17 +68,18 @@ export class PostOfficeService {
         'assets/department.jpg',
         'Some description',
         'C0001',
+        '',
         [])
       );
       return;
     }
-    this.postOfficesList.push(department);
+    this.postDepartmentList.push(department);
   }
-  remove(department?: PostOffice): void {
+  remove(department?: PostDepartment): void {
     if (department) {
       try {
-        const index = this.postOfficesList.indexOf(department);
-        this.postOfficesList.splice(index, 1);
+        const index = this.postDepartmentList.indexOf(department);
+        this.postDepartmentList.splice(index, 1);
         return;
       } catch  {
         console.log('Item not found');
@@ -82,7 +87,7 @@ export class PostOfficeService {
     }
     if (!department) {
       try {
-        this.postOfficesList.splice(this.postOfficesList.length - 1, 1);
+        this.postDepartmentList.splice(this.postDepartmentList.length - 1, 1);
       } catch  {
         console.log('Error');
       }
