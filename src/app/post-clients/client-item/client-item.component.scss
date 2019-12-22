@@ -12,6 +12,9 @@ mat-card {
     width: 100%;
     mat-card-actions {
       margin-bottom: 0;
+      button {
+        text-transform: uppercase;
+      }
     }
   }
 }
