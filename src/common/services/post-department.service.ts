@@ -14,8 +14,8 @@ export class PostDepartmentService {
       '111-111-11-11',
       'assets/department.jpg',
       'Some description',
-      '',
       'C0001',
+      '',
       []
     ),
     new PostDepartment(
