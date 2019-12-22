@@ -18,6 +18,7 @@ import {PostDepartmentService} from '../common/services/post-department.service'
 import {PostDepartmentComponent} from './post-structs/post-department/post-department.component';
 import {DepartmentsListComponent} from './post-structs/departments-list/departments-list.component';
 import {PercentPipe} from '../common/pipes/percent.pipe';
+import {PricePipe} from '../common/pipes/price.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {PercentPipe} from '../common/pipes/percent.pipe';
     PackageListComponent,
     PostListComponent,
     PostCompanyDetailComponent,
-    PercentPipe
+    PercentPipe,
+    PricePipe
   ],
   imports: [
     BrowserModule,

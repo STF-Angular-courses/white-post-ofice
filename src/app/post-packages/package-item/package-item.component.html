@@ -3,7 +3,7 @@
   <div class="info-block">
     <mat-card-title>{{ package.name }}</mat-card-title>
     <mat-card-subtitle>Type: {{ package.type }}</mat-card-subtitle>
-    <mat-card-subtitle>Price: {{ package.price }}</mat-card-subtitle>
+    <mat-card-subtitle>Price: {{ package.price | currency: currency.USD }}</mat-card-subtitle>
     <mat-card-subtitle>Sender ID: {{ package.clientId }}</mat-card-subtitle>
     <mat-card-content>{{ package.description }}</mat-card-content>
     <mat-card-actions align="end">
