@@ -17,7 +17,7 @@ import { PostCompanyDetailComponent } from './post-company-detail/post-company-d
 import {PostDepartmentService} from '../common/services/post-department.service';
 import {PostDepartmentComponent} from './post-structs/post-department/post-department.component';
 import {DepartmentsListComponent} from './post-structs/departments-list/departments-list.component';
-
+import {PercentPipe} from '../common/pipes/percent.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {DepartmentsListComponent} from './post-structs/departments-list/departme
     ClientListComponent,
     PackageListComponent,
     PostListComponent,
-    PostCompanyDetailComponent
+    PostCompanyDetailComponent,
+    PercentPipe
   ],
   imports: [
     BrowserModule,
