@@ -1,61 +1,96 @@
 import { Injectable } from '@angular/core';
-import Person from '../contracts/person';
-import {IClient} from '../models/client.model';
+import Client from '../contracts/client.contract';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
-  clientList: IClient[] = [
-    new Person(
-      'Ivan Ivanov',
+  clientList: Client[] = [
+    new Client(
       'HB0001',
-      33,
-      'HB0000',
       'individual',
+      'Ivan Ivanov',
       'Zavodska str, 4/1, Khmelnytskyi, Ukraine',
       '093-102-120-11-11',
-      0.03,
+      0.06,
       'assets/person1.jpg',
-      'Person #1 description'
+      'Description',
+      [],
+      [''],
+      ['']
     ),
-    new Person(
-      'Petrov Sidiriv',
+    new Client(
       'HB0002',
-      43,
-      'HB0001',
       'individual',
+      'Petrov Sidiriv',
       'Trudova str, 14, Khmelnytskyi, Ukraine',
       '055-155-177-16-551',
-      0.05,
+      0.02,
       'assets/person2.jpg',
-      'Person #2 description'
-    ), new Person(
-      'Sergiy Ivanovych',
+      'Description',
+      [''],
+      ['', ''],
+      []
+    ),
+    new Client(
       'HB0003',
-      23,
-      'HB0002',
       'individual',
+      'Sergiy Ivanovych',
       'Tovstogo str, 38/2, Khmelnytskyi, Ukraine',
       '045-178-157-11-50',
-      0.055,
+      0.04,
       'assets/person3.jpg',
-      'Person #3 description'
+      'Description',
+      [],
+      [],
+      ['', '']
+    ),
+    new Client(
+      'CC0001',
+      'company',
+      'Some IT Company',
+      'Karaganda, Some Country',
+      '666-666-666',
+      0.1,
+      'assets/microsoft.png',
+      'Description',
+      [],
+      [],
+      [],
     )
   ];
-  constructor() { }
-  add(client: IClient): void {
+  add(client?: Client): void {
+    if (!client) {
+      this.clientList.push(
+        new Client(
+          'CC0001',
+          'corporate client',
+          'Some IT Company',
+          'Karaganda, Some Country',
+          '666-666-666',
+          0.11,
+          'assets/microsoft.png',
+          'Some it company. Client from long time',
+          [],
+          [],
+          []
+        )
+      );
+      return;
+    }
     this.clientList.push(client);
   }
-  remove(client?: IClient): void {
+  remove(client?: Client): void {
     if (client) {
       try {
         const index = this.clientList.indexOf(client);
         this.clientList.splice(index, 1);
+        return;
       } catch  {
         console.log('Item not found');
       }
-    } else {
+    }
+    if (!client) {
       try {
         this.clientList.splice(this.clientList.length - 1, 1);
       } catch   {

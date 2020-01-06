@@ -1,20 +1,14 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {IClient} from '../../../common/models/client.model';
-
+import Client from '../../../common/contracts/client.contract';
 
 @Component({
   selector: 'app-client-item',
   templateUrl: './client-item.component.html',
   styleUrls: ['./client-item.component.scss']
 })
-export class ClientItemComponent implements OnInit {
-  @Input() client: IClient;
-  @Output() clientDetail = new EventEmitter<IClient>();
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class ClientItemComponent  {
+  @Input() client: Client;
+  @Output() clientDetail = new EventEmitter<Client>();
   viewDetail(): void {
     this.clientDetail.emit(this.client);
   }

@@ -1,6 +1,7 @@
-import {IPackage} from './package.model';
+import {PackageModel} from './package.model';
+import Package from '../contracts/package';
 
-export interface IClient {
+export default interface ClientModel {
   id: string;
   category: string;
   name: string;
@@ -9,7 +10,7 @@ export interface IClient {
   discount: number | boolean;
   screen: string;
   description: string;
-  items: IPackage[];
-  sent: IPackage[];
-  received: IPackage[];
+  items?: Package[] | PackageModel[] | string [];
+  sent?: Package[] | PackageModel[] | string [];
+  received?: Package[] | PackageModel[] | string [];
 }

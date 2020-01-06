@@ -1,19 +1,15 @@
-import PostDepartment from '../contracts/post-department';
-
-export interface IPackage {
+export interface PackageModel {
   id: string;
   clientId: string;
-  // client: IOrganisation | IPerson;
-  type: string;
   name: string;
   screen: string;
   description: string;
+  type: string;
+  price: string;
   height: string;
   width: string;
   weight: string;
-  price: string;
-  // startingPoint: PostDepartment;
-  // destinationPoint: PostDepartment;
   startingPointID: string;
   destinationPointID: string;
+  receiver: string;
 }

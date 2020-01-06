@@ -1,5 +1,5 @@
-import {IOrganisation} from './organisation.model';
+import Organisation from '../contracts/abstract-organisation.contract';
 
-export   interface IDepartment {
-   parent: IOrganisation | string;
+export   interface DepartmentModel {
+   parent: Organisation | string;
 }

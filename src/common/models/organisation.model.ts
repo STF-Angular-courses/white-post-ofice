@@ -1,12 +1,13 @@
-import {IPerson} from './person.model';
+import Person from '../contracts/person.contract';
+import Organisation from '../contracts/abstract-organisation.contract';
 
-export  interface IOrganisation {
+export  interface OrganisationModel {
   id: string;
   type: string;
   name: string;
   address: string;
   telephone: string;
-  owner?: string | IOrganisation | IPerson;
+  owner?: string | Organisation | Person;
   screen?: string;
   description?: string;
 }

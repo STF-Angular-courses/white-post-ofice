@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import PostDepartment from '../contracts/post-department';
+import PostDepartment from '../contracts/post-department.contract';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,7 @@ export class PostDepartmentService {
       'assets/department.jpg',
       'Some description',
       'C0001',
+      '',
       []
     ),
     new PostDepartment(
@@ -26,6 +27,7 @@ export class PostDepartmentService {
       'assets/department.jpg',
       'Some description',
       'C0001',
+      '',
       []
     ),
     new PostDepartment(
@@ -37,6 +39,7 @@ export class PostDepartmentService {
       'assets/department.jpg',
       'Some description',
       'C0002',
+      '',
       []
     ),
     new PostDepartment(
@@ -48,22 +51,41 @@ export class PostDepartmentService {
       'assets/department.jpg',
       'Some description',
       'C0002',
+      '',
       []
     ),
   ];
   constructor() { }
-  add(dep: PostDepartment): void {
-    this.postDepartmentList.push(dep);
+  add(department?: PostDepartment): void {
+    if (!department) {
+      // TODO: TEST DATA. REMOVE IN FUTURE.
+      this.postDepartmentList.push(new PostDepartment(
+        'CD0001-00',
+        'Departmant',
+        'Post Department in Khmelnytskyi',
+        'Svoboda str, 23, Khmelnytskyi, Ukraine',
+        '111-111-11-11',
+        'assets/department.jpg',
+        'Some description',
+        'C0001',
+        '',
+        [])
+      );
+      return;
+    }
+    this.postDepartmentList.push(department);
   }
-  remove(dep?: PostDepartment): void {
-    if (dep) {
+  remove(department?: PostDepartment): void {
+    if (department) {
       try {
-        const index = this.postDepartmentList.indexOf(dep);
+        const index = this.postDepartmentList.indexOf(department);
         this.postDepartmentList.splice(index, 1);
+        return;
       } catch  {
         console.log('Item not found');
       }
-    } else {
+    }
+    if (!department) {
       try {
         this.postDepartmentList.splice(this.postDepartmentList.length - 1, 1);
       } catch  {

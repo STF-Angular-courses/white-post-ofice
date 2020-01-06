@@ -1,5 +1,5 @@
-import {IPostDepartment} from './post-department.model';
+import PostDepartment from '../contracts/post-department.contract';
 
-export  interface IPostCompany {
-  departments: IPostDepartment[];
+export  interface PostCompanyModel  {
+  departments: PostDepartment[] | string[];
 }
