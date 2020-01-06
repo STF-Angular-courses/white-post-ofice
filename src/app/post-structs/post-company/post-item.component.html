@@ -1,21 +1,13 @@
 <mat-card>
-  <img [src]="postCompany.screen" [alt]="postCompany.name"
-       class="" [ngClass]="{ 'logo': !showDepartmentList, 'top-logo' :showDepartmentList }" />
+  <img [src]="postCompany.screen" [alt]="postCompany.name" class="logo" />
   <div class="info-block">
     <mat-card-title>{{ postCompany.name }}</mat-card-title>
     <mat-card-subtitle>ID: {{ postCompany.id }}</mat-card-subtitle>
     <mat-card-subtitle>Address: {{ postCompany.address }}</mat-card-subtitle>
     <mat-card-subtitle>Tel: {{ postCompany.telephone }}</mat-card-subtitle>
     <mat-card-content>{{ postCompany.description }}</mat-card-content>
-<!--    <div class="list" *ngIf="showDepartmentList">-->
-<!--      <ul *ngFor="let department of postDepartments">-->
-<!--        <li>-->
-<!--          <app-post-department [department]="department"></app-post-department>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--    </div>-->
     <mat-card-actions align="end">
-      <button mat-button (click)="viewMore()" *ngIf="!showDepartmentList">More</button>
+      <button mat-button (click)="viewMore()">More</button>
     </mat-card-actions>
   </div>
 </mat-card>

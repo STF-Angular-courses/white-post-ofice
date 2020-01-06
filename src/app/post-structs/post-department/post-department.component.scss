@@ -4,13 +4,16 @@ mat-card {
 
   .logo {
     align-self: center;
-
+    max-height: 240px;
   }
   .info-block {
     width: 100%;
     margin: 0 30px;
     mat-card-actions {
       margin-bottom: 0;
+      button {
+        text-transform: uppercase;
+      }
     }
   }
 }
