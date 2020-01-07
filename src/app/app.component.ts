@@ -9,23 +9,12 @@ import Package from '../common/contracts/package';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  // postCompanyList: PostCompany[];
-  // postDepartmentList: PostDepartment[];
-  // clientsList: Client[];
-  // packageList: Package[];
+export class AppComponent {
   showPostList = true;
   showClientList = false;
   showPackageList = false;
   showPostOfficesList = false;
   itemToDetail: PostCompany | PostDepartment | Client | Package ;
-  constructor() { }
-  ngOnInit(): void {
-    // this.postCompanyList = this.postService.postCompanyList;
-    // this.postDepartmentList = this.postOfficeService.postDepartmentList;
-    // this.clientsList = this.clientService.clientList;
-    // this.packageList = this.packageService.packageList;
-  }
   postCompanyDetail(event: PostCompany ) {
     this.hideAllList();
     this.itemToDetail = event;

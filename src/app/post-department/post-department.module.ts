@@ -4,12 +4,14 @@ import {PostDepartmentComponent} from './post-department/post-department.compone
 import {DepartmentsListComponent} from './departments-list/departments-list.component';
 import {PostDepartmentService} from './common/services/post-department.service';
 import {MatButtonModule, MatCardModule} from '@angular/material';
+import {PostDepartmentDetailComponent} from './post-department-detail/post-department-detail.component';
 
 
 @NgModule({
   declarations: [
     PostDepartmentComponent,
-    DepartmentsListComponent
+    DepartmentsListComponent,
+    PostDepartmentDetailComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import {MatButtonModule, MatCardModule} from '@angular/material';
   providers: [PostDepartmentService],
   exports: [
     PostDepartmentComponent,
-    DepartmentsListComponent
+    DepartmentsListComponent,
+    PostDepartmentDetailComponent
   ]
 })
 export class PostDepartmentModule { }
