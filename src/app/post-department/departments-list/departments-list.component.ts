@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import PostDepartment from '../../../common/contracts/post-department.contract';
-import {PostDepartmentService} from '../../../common/services/post-department.service';
+import PostDepartment from '../common/contracts/post-department.contract';
+import {PostDepartmentService} from '../common/services/post-department.service';
 
 @Component({
   selector: 'app-departments-list',
