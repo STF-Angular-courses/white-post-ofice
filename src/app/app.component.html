@@ -1,75 +1,41 @@
 <main>
   <aside>
     <span id="post-btn" (click)="hideAllList(); showPostList = true">Post</span>
-    <span id="client-btn" (click)="hideAllList(); showClientList = true"
-      >Clients</span
-    >
-    <span id="pack-btn" (click)="hideAllList(); showPackageList = true"
-      >Packages</span
-    >
-    <span id="dep-btn" (click)="hideAllList(); showPostOfficesList = true"
-      >Offices</span
-    >
+    <span id="client-btn" (click)="hideAllList(); showClientList = true">Clients</span>
+    <span id="pack-btn" (click)="hideAllList(); showPackageList = true">Packages</span>
+    <span id="dep-btn" (click)="hideAllList(); showPostOfficesList = true">Offices</span>
   </aside>
   <div class="content">
     <div *ngIf="showPostList">
-      <button
-        mat-button
-        color="primary"
-        (click)="showPostList = false"
-        class="hide-list-btn"
-      >
+      <button mat-button color="primary" (click)="showPostList = false" class="hide-list-btn">
         Hide List
       </button>
-      <app-post-list
-        (postCompanyDetail)="postCompanyDetail($event)"
-      ></app-post-list>
+      <app-post-list (postCompanyDetail)="postCompanyDetail($event)"></app-post-list>
     </div>
     <div *ngIf="showClientList">
-      <button
-        mat-button
-        color="primary"
-        (click)="showClientList = false"
-        class="hide-list-btn"
-      >
+      <button mat-button color="primary" (click)="showClientList = false" class="hide-list-btn">
         Hide List
       </button>
       <app-client-list></app-client-list>
     </div>
     <div *ngIf="showPackageList">
-      <button
-        mat-button
-        color="primary"
-        (click)="showPackageList = false"
-        class="hide-list-btn"
-      >
+      <button mat-button color="primary" (click)="showPackageList = false" class="hide-list-btn">
         Hide List
       </button>
       <app-package-list [packageList]="packageList"> </app-package-list>
     </div>
     <div *ngIf="showPostOfficesList">
-      <button
-        mat-button
-        color="primary"
-        (click)="showPostOfficesList = false"
-        class="hide-list-btn"
-      >
+      <button mat-button color="primary" (click)="showPostOfficesList = false" class="hide-list-btn">
         Hide List
       </button>
       <app-departments-list> </app-departments-list>
     </div>
     <!--        ITEM DETAIL          -->
     <div class="detail-company-block" *ngIf="itemToDetail">
-      <button
-        mat-button
-        color="primary"
-        (click)="itemToDetail = undefined; showPostList = true"
-        class="hide-list-btn"
-      >
+      <button mat-button color="primary" (click)="itemToDetail = undefined; showPostList = true" class="hide-list-btn">
         Close Detail Info
       </button>
-      <app-post-company-detail [postCompany]="itemToDetail">
-      </app-post-company-detail>
+      <app-post-company-detail [postCompany]="itemToDetail"></app-post-company-detail>
     </div>
   </div>
 </main>
