@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {PostService} from '../../../common/services/post.service';
-import {PostCompany} from '../../../common/contracts/post-company.contract';
+import {PostService} from '../common/services/post.service';
+import {PostCompany} from '../common/contracts/post-company.contract';
 
 @Component({
   selector: 'app-post-list',
