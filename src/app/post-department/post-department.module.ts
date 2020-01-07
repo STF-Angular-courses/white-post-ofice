@@ -11,12 +11,12 @@ import {PostDepartmentDetailComponent} from './post-department-detail/post-depar
   declarations: [
     PostDepartmentComponent,
     DepartmentsListComponent,
-    PostDepartmentDetailComponent
+    PostDepartmentDetailComponent,
   ],
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [PostDepartmentService],
   exports: [

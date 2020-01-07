@@ -30,6 +30,9 @@ import {PackageListComponent} from './post-packages/package-list/package-list.co
     PostDepartmentModule
   ],
   providers: [],
+  exports: [
+    PackageListComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

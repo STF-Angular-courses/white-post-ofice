@@ -8,10 +8,13 @@ import {PackageModel} from '../../../common/models/package.model';
   templateUrl: './package-list.component.html',
   styleUrls: ['./package-list.component.scss']
 })
-export class PackageListComponent {
+export class PackageListComponent implements OnInit {
   packageList: Package[] | PackageModel[];
   @Output() packageDetail = new EventEmitter<Package | PackageModel>();
   constructor(private packageService: PackageService) {}
+  ngOnInit(): void {
+    this.packageList = this.packageService.packageList;
+  }
   showDetail(item: Package | PackageModel) {
     this.packageDetail.emit(item);
   }
