@@ -1,5 +1,5 @@
-import Package from '../contracts/package';
 import {Injectable} from '@angular/core';
+import Package from '../contracts/package';
 
 @Injectable({
   providedIn: 'root'

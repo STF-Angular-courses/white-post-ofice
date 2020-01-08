@@ -1,7 +1,7 @@
 import ClientModel from '../models/client.model';
 import {ILogger} from '../interfaces/logger-interface';
-import Package from './package';
-import {PackageModel} from '../models/package.model';
+import Package from '../../../package/common/contracts/package';
+import {PackageModel} from '../../../package/common/models/package.model';
 
 export default class Client implements ClientModel, ILogger {
   constructor(

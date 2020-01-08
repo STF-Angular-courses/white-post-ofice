@@ -1,5 +1,5 @@
-import {PackageModel} from './package.model';
-import Package from '../contracts/package';
+import Package from '../../../package/common/contracts/package';
+import {PackageModel} from '../../../package/common/models/package.model';
 
 export default interface ClientModel {
   id: string;
