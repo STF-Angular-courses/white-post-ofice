@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import PostDepartment from '../../../../common/contracts/post-department.contract';
+import PostDepartment from '../contracts/post-department.contract';
 
 @Injectable({
   providedIn: 'root'

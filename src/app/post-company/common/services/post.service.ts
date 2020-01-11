@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {PostCompany} from '../../../../common/contracts/post-company.contract';
+import {PostCompany} from '../contracts/post-company.contract';
 
 
 @Injectable({
