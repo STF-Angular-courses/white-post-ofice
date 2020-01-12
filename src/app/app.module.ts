@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatIconModule, MatListModule} from '@angular/material';
 import {PostCompanyModule} from './post-company/post-company.module';
 import {PostDepartmentModule} from './post-department/post-department.module';
+import {ClientModule} from "./client/client.module";
+import {PackageModule} from "./package/package.module";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {PostDepartmentModule} from './post-department/post-department.module';
     MatButtonModule,
     MatListModule,
     PostCompanyModule,
-    PostDepartmentModule
+    PostDepartmentModule,
+    ClientModule,
+    PackageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
