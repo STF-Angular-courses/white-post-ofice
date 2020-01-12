@@ -1,0 +1,43 @@
+<main>
+  <aside>
+    <span id="post-btn" (click)="hideAllList(); showPostList = true">Post</span>
+    <span id="client-btn" (click)="hideAllList(); showClientList = true">Clients</span>
+    <span id="pack-btn" (click)="hideAllList(); showPackageList = true">Packages</span>
+    <span id="dep-btn" (click)="hideAllList(); showPostOfficesList = true">Offices</span>
+  </aside>
+  <div class="content">
+    <div *ngIf="showPostList">
+      <button mat-button color="primary" class="hide-list-btn" (click)="showPostList = false">
+        Hide List
+      </button>
+      <app-post-list (postCompanyDetail)="postCompanyDetail($event)"></app-post-list>
+    </div>
+    <div *ngIf="showPostOfficesList">
+      <button mat-button color="primary" class="hide-list-btn" (click)="showPostOfficesList = false">
+        Hide List
+      </button>
+      <app-departments-list></app-departments-list>
+    </div>
+    <div *ngIf="showClientList">
+      <button mat-button color="primary" class="hide-list-btn" (click)="showClientList = false">
+        Hide List
+      </button>
+      <app-client-list></app-client-list>
+    </div>
+    <div *ngIf="showPackageList">
+      <button mat-button color="primary" class="hide-list-btn" (click)="showPackageList = false">
+        Hide List
+      </button>
+      <app-package-list></app-package-list>
+    </div>
+    <!--        ITEM DETAIL          -->
+    <div class="detail-company-block" *ngIf="itemToDetail">
+      <button mat-button color="primary"class="hide-list-btn" (click)="itemToDetail = undefined;
+        showPostList = true">
+        Close Detail Info
+      </button>
+      <app-post-company-detail [postCompany]="itemToDetail"></app-post-company-detail>
+<!--      <app-post-department-detail [department]="itemToDetail"></app-post-department-detail>-->
+    </div>
+  </div>
+</main>
