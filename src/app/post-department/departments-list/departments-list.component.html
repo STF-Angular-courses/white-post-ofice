@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-card-actions align="end">
+    <button mat-button color="primary" class="add-btn" (click)="postDepartmentService.add()">
+      Add office
+    </button>
+    <button mat-button color="warn" class="remove-btn" (click)="postDepartmentService.remove()">
+      Remove office
+    </button>
+  </mat-card-actions>
+  <ul class="post-list">
+    <li *ngFor="let department of postDepartmentList">
+      <app-post-department [department]="department" (postDepartmentDetail)="showDetail($event)">
+      </app-post-department>
+    </li>
+  </ul>
+</div>
