@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import PostDepartment from '../../../common/contracts/post-department.contract';
+import PostDepartment from '../common/contracts/post-department.contract';
 
 
 @Component({

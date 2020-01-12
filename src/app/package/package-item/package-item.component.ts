@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import Package from '../../../common/contracts/package';
-import {CurrencyEnum} from '../../../common/custom-types/currency-enum';
+import {CurrencyEnum} from '../common/custom-types/currency-enum';
+import Package from '../common/contracts/package';
 
 @Component({
   selector: 'app-package-item',

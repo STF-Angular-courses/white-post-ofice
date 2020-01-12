@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ClientService} from '../../../common/services/client.service';
-import Client from '../../../common/contracts/client.contract';
+import Client from '../common/contracts/client.contract';
+import {ClientService} from '../common/services/client.service';
 
 @Component({
   selector: 'app-client-list',

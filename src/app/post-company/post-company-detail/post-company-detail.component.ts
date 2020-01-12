@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PostCompany} from '../../../common/contracts/post-company.contract';
+import {PostCompany} from '../common/contracts/post-company.contract';
 
 @Component({
   selector: 'app-post-company-detail',

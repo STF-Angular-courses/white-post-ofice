@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import Client from '../../../common/contracts/client.contract';
+import Client from '../common/contracts/client.contract';
 
 @Component({
   selector: 'app-client-item',

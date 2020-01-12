@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PackageService} from '../../../common/services/package.service';
-import Package from '../../../common/contracts/package';
-import {PackageModel} from '../../../common/models/package.model';
+import Package from '../common/contracts/package';
+import {PackageModel} from '../common/models/package.model';
+import {PackageService} from '../common/services/package.service';
 
 @Component({
   selector: 'app-package-list',
