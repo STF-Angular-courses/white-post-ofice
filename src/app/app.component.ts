@@ -10,22 +10,7 @@ import Package from './package/common/contracts/package';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  showPostList = true;
-  showClientList = false;
-  showPackageList = false;
-  showPostOfficesList = false;
   itemToDetail: PostCompany | PostDepartment | Client | Package ;
-  postCompanyDetail(event: PostCompany ) {
-    this.hideAllList();
-    this.itemToDetail = event;
-  }
-  hideAllList() {
-    this.showPostList = false;
-    this.showClientList = false;
-    this.showPackageList = false;
-    this.showPostOfficesList = false;
-    this.itemToDetail = undefined;
-  }
 }
 
 

@@ -8,6 +8,8 @@ import {PostCompanyModule} from './post-company/post-company.module';
 import {PostDepartmentModule} from './post-department/post-department.module';
 import {ClientModule} from "./client/client.module";
 import {PackageModule} from "./package/package.module";
+import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import {PackageModule} from "./package/package.module";
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    RouterModule,
+    AppRoutingModule,
     PostCompanyModule,
     PostDepartmentModule,
     ClientModule,
