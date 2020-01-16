@@ -8,7 +8,7 @@
     <mat-card-subtitle>Parent: {{ department.parent }}</mat-card-subtitle>
     <mat-card-content>{{ department.description }}</mat-card-content>
     <mat-card-actions align="end">
-      <button mat-button (click)="viewMore()">More</button>
+      <a mat-button [routerLink]="['/department', department.id]" routerLinkActive="$router_link-active$">More</a>
     </mat-card-actions>
   </div>
 </mat-card>

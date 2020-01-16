@@ -9,9 +9,4 @@ import PostDepartment from '../common/contracts/post-department.contract';
 })
 export class PostDepartmentComponent  {
   @Input() department: PostDepartment;
-  @Output() postDepartmentDetail = new EventEmitter<PostDepartment>();
-
-  viewMore(): void {
-    this.postDepartmentDetail.emit(this.department);
-  }
 }

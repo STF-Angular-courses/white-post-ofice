@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import Client from '../contracts/client.contract';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -59,6 +60,10 @@ export class ClientService {
       [],
     )
   ];
+  getElemById( id: string ): Client {
+    const index = this.clientList.findIndex( elem => elem.id === id);
+    return this.clientList[index];
+  }
   add(client?: Client): void {
     if (!client) {
       this.clientList.push(

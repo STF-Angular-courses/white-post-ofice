@@ -53,6 +53,10 @@ export class PackageService {
     ),
   ];
   constructor() { }
+  getElemById( id: string ): Package {
+    const index = this.packageList.findIndex(element => element.id === id);
+    return this.packageList[index];
+  }
   add(pack?: Package): void {
     if (!pack) {
       // TODO: TEST FUNCTIONAL, TO DELETE IN FUTURE

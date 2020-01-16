@@ -5,6 +5,7 @@ import {DepartmentsListComponent} from './departments-list/departments-list.comp
 import {PostDepartmentService} from './common/services/post-department.service';
 import {MatButtonModule, MatCardModule} from '@angular/material';
 import {PostDepartmentDetailComponent} from './post-department-detail/post-department-detail.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {PostDepartmentDetailComponent} from './post-department-detail/post-depar
     CommonModule,
     MatCardModule,
     MatButtonModule,
+    RouterModule
   ],
   providers: [PostDepartmentService],
   exports: [

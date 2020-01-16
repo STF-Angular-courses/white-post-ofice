@@ -56,6 +56,10 @@ export class PostDepartmentService {
     ),
   ];
   constructor() { }
+  getElemById(id: string): PostDepartment {
+    const index = this.postDepartmentList.findIndex(element => element.id === id);
+    return this.postDepartmentList[index];
+  }
   add(department?: PostDepartment): void {
     if (!department) {
       // TODO: TEST DATA. REMOVE IN FUTURE.
@@ -93,5 +97,6 @@ export class PostDepartmentService {
       }
     }
   }
+
 }
 

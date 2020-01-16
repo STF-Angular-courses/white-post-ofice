@@ -6,13 +6,16 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatListModule} from "@angular/material/list";
+import {RouterModule} from "@angular/router";
+import { ClientDetailComponent } from './client-detail/client-detail.component';
 
 
 
 @NgModule({
   declarations: [
     ClientListComponent,
-    ClientItemComponent
+    ClientItemComponent,
+    ClientDetailComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +23,7 @@ import {MatListModule} from "@angular/material/list";
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    RouterModule
   ],
   exports: [
     ClientListComponent,

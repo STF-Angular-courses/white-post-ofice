@@ -4,6 +4,9 @@ import {PostListComponent} from './post-company/post-list/post-list.component';
 import {DepartmentsListComponent} from './post-department/departments-list/departments-list.component';
 import {PackageListComponent} from './package/package-list/package-list.component';
 import {ClientListComponent} from './client/client-list/client-list.component';
+import {PostDepartmentDetailComponent} from './post-department/post-department-detail/post-department-detail.component';
+import {PackageDetailComponent} from "./package/package-detail/package-detail.component";
+import {ClientDetailComponent} from "./client/client-detail/client-detail.component";
 
 const routes: Routes = [
   {
@@ -16,10 +19,19 @@ const routes: Routes = [
     path: 'departments', component: DepartmentsListComponent
   },
   {
+    path: 'department/:id', component: PostDepartmentDetailComponent
+  },
+  {
     path: 'packages', component: PackageListComponent
   },
   {
+    path: 'package/:id', component: PackageDetailComponent
+  },
+  {
     path: 'clients', component: ClientListComponent
+  },
+  {
+    path: 'client/:id', component: ClientDetailComponent
   }
 ];
 
