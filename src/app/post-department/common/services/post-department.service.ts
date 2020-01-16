@@ -60,6 +60,11 @@ export class PostDepartmentService {
     const index = this.postDepartmentList.findIndex(element => element.id === id);
     return this.postDepartmentList[index];
   }
+  getElementsById(id: string): PostDepartment[] {
+    return this.postDepartmentList.filter( (elem) => {
+      return elem.parent === id;
+    });
+  }
   add(department?: PostDepartment): void {
     if (!department) {
       // TODO: TEST DATA. REMOVE IN FUTURE.

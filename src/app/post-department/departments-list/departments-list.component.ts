@@ -18,16 +18,12 @@ export class DepartmentsListComponent implements OnInit {
       return;
     }
     if (this.parentID) {
-      this.postDepartmentList = this.postDepartmentService.postDepartmentList.filter( (elem) => {
-        return elem.parent === this.parentID;
-      });
+      this.postDepartmentList = this.postDepartmentService.getElementsById(this.parentID);
     }
   }
   updateList(): void {
     if (this.parentID) {
-      this.postDepartmentList = this.postDepartmentService.postDepartmentList.filter( (elem) => {
-        return elem.parent === this.parentID;
-      });
+      this.postDepartmentList = this.postDepartmentService.getElementsById(this.parentID);
     }
   }
 }
