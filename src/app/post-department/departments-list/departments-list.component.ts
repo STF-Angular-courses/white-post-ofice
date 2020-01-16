@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostDepartmentService} from '../common/services/post-department.service';
-import PostDepartment from "../common/contracts/post-department.contract";
+import PostDepartment from '../common/contracts/post-department.contract';
 
 @Component({
   selector: 'app-departments-list',
@@ -9,7 +9,6 @@ import PostDepartment from "../common/contracts/post-department.contract";
 })
 export class DepartmentsListComponent implements OnInit {
   @Input() parentID: string;
-  @Output() postDepartmentDetail = new EventEmitter<PostDepartment>();
   postDepartmentList: PostDepartment[];
   constructor(private postDepartmentService: PostDepartmentService) { }
 
@@ -19,12 +18,16 @@ export class DepartmentsListComponent implements OnInit {
       return;
     }
     if (this.parentID) {
-      this.postDepartmentList = this.postDepartmentService.postDepartmentList.filter( (elem, index) => {
+      this.postDepartmentList = this.postDepartmentService.postDepartmentList.filter( (elem) => {
         return elem.parent === this.parentID;
       });
     }
   }
-  showDetail(item: PostDepartment): void {
-    this.postDepartmentDetail.emit(item);
+  updateList(): void {
+    if (this.parentID) {
+      this.postDepartmentList = this.postDepartmentService.postDepartmentList.filter( (elem) => {
+        return elem.parent === this.parentID;
+      });
+    }
   }
 }

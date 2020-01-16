@@ -34,6 +34,10 @@ export class PostService {
       ['CD0002-00', 'CD0002-01']
     )
   ];
+  getElemById(id: string): PostCompany {
+    const index = this.postCompanyList.findIndex(elem => elem.id === id);
+    return this.postCompanyList[index];
+  }
   add(postCompany?: PostCompany): void {
     if (!postCompany) {
       // TODO: TEST FUNCTIONAL, TO DELETE IN FUTURE

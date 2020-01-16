@@ -8,6 +8,7 @@ import {PostItemComponent} from './post-company/post-item.component';
 import {PostCompanyDetailComponent} from './post-company-detail/post-company-detail.component';
 import {PostListComponent} from './post-list/post-list.component';
 import {PostDepartmentModule} from '../post-department/post-department.module';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {PostDepartmentModule} from '../post-department/post-department.module';
     MatIconModule,
     MatButtonModule,
     MatListModule,
+    RouterModule,
     PostDepartmentModule
   ],
   providers: [PostService],
