@@ -10,8 +10,7 @@
   </mat-card-actions>
   <ul class="post-list">
     <li *ngFor="let item of packageList">
-      <app-package-item [package]="item" (packageDetail)="showDetail($event)">
-      </app-package-item>
+      <app-package-item [package]="item"></app-package-item>
     </li>
   </ul>
 </div>

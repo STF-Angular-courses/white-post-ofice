@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import Client from '../common/contracts/client.contract';
 import {ClientService} from '../common/services/client.service';
 
@@ -8,15 +8,11 @@ import {ClientService} from '../common/services/client.service';
   styleUrls: ['./client-list.component.scss']
 })
 export class ClientListComponent implements OnInit {
-  @Output() clientDetail = new EventEmitter<Client>();
   clients: Client[];
 
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
     this.clients = this.clientService.clientList;
-  }
-  showDetail(item: Client) {
-    this.clientDetail.emit(item);
   }
 }

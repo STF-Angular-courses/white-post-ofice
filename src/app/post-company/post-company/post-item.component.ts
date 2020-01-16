@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {PostCompany} from '../common/contracts/post-company.contract';
 
 @Component({
@@ -8,8 +8,4 @@ import {PostCompany} from '../common/contracts/post-company.contract';
 })
 export class PostItemComponent  {
   @Input() postCompany: PostCompany;
-  @Output() postCompanyDetail = new EventEmitter<PostCompany>();
-  viewMore(): void {
-    this.postCompanyDetail.emit(this.postCompany);
-  }
 }

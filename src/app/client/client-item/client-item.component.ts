@@ -8,8 +8,4 @@ import Client from '../common/contracts/client.contract';
 })
 export class ClientItemComponent  {
   @Input() client: Client;
-  @Output() clientDetail = new EventEmitter<Client>();
-  viewDetail(): void {
-    this.clientDetail.emit(this.client);
-  }
 }
