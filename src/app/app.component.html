@@ -1,0 +1,25 @@
+<header>
+  <span class="logo"><a [routerLink]="['/']" routerLinkActive="$router_link-active$">Logo</a></span>
+  <nav class="top-nav">
+    <ul class="top-nav-list">
+      <li><a [routerLink]="['/companies']" routerLinkActive="$router_link-active$">Companies</a></li>
+      <li><a [routerLink]="['/departments']" fragment="test_id" routerLinkActive="$router_link-active$">Departments</a></li>
+      <li><a [routerLink]="['/clients']" routerLinkActive="$router_link-active$">Clients</a></li>
+      <li><a [routerLink]="['/packages']" routerLinkActive="$router_link-active$">Packages</a></li>
+      <li><a [routerLink]="['/']" routerLinkActive="$router_link-active$">item</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <aside>
+    <a [routerLink]="['/companies']" routerLinkActive="$router_link-active$" id="post-btn">Company</a>
+    <a [routerLink]="['/departments']" fragment="test_id" routerLinkActive="$router_link-active$"
+       id="client-btn">Department</a>
+    <a [routerLink]="['/packages']" routerLinkActive="$router_link-active$" id="pack-btn">Package</a>
+    <a [routerLink]="['/clients']" routerLinkActive="$router_link-active$" id="dep-btn">Client</a>
+  </aside>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer>footer</footer>

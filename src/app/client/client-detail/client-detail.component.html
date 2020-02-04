@@ -1,0 +1,11 @@
+<mat-card>
+  <img [src]="client.screen" [alt]="client.name" class="logo" />
+  <div class="info-block">
+    <mat-card-title>Name: {{ client.name }}</mat-card-title>
+    <mat-card-subtitle>Category: {{ client.category }}</mat-card-subtitle>
+    <mat-card-subtitle>Address: {{ client.address }}</mat-card-subtitle>
+    <mat-card-subtitle>Tel: {{ client.telephone }}</mat-card-subtitle>
+    <mat-card-subtitle>Discount: {{ client.discount | percent }}</mat-card-subtitle>
+    <mat-card-content>{{ client.description }}</mat-card-content>
+  </div>
+</mat-card>
